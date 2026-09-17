@@ -24,13 +24,13 @@
       <aside>
         <h2>Sidebar</h2>
         <nav>
-        <ul>
-          <li><a href="#text-content">Text Content</a></li>
-          <li><a href="#lists">Lists</a></li>
-          <li><a href="#links">Links</a></li>
-          <li><a href="#multimedia-content">Multimedia Content</a></li>
-        </ul>
-      </nav>
+          <ul>
+            <li><a href="#text-content">Text Content</a></li>
+            <li><a href="#lists">Lists</a></li>
+            <li><a href="#links">Links</a></li>
+            <li><a href="#multimedia-content">Multimedia Content</a></li>
+          </ul>
+        </nav>
       </aside>
       <section id="text-content">
         <h2>Text Content</h2>
@@ -67,14 +67,12 @@
           Lists are used to group related items together. There are two main
           types of lists: unordered and ordered.
         </p>
-
         <h3>Unordered List</h3>
         <ul>
           <li>Item 1</li>
           <li>Item 2</li>
           <li>Item 3</li>
         </ul>
-
         <h3>Ordered List</h3>
         <ol>
           <li>Item 1</li>
@@ -101,7 +99,6 @@
         <div>
           <h3>Image</h3>
           <img src="./img/patonana.png" alt="Placeholder Image" />
-
           <h3>Video</h3>
           <video controls>
             <source
@@ -119,6 +116,158 @@
             Your browser does not support the audio element.
           </audio>
         </div>
+      </section>
+      <section>
+        <h2>Tables</h2>
+        <p>
+          Tables are used to display data in a tabular format, consisting of
+          rows and columns.
+        </p>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Header 1</th>
+              <th>Header 2</th>
+              <th>Header 3</th>
+              <th>Header 4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Data 1</td>
+              <td>Data 2</td>
+              <td>Data 3</td>
+              <td>Data 4</td>
+            </tr>
+            <tr>
+              <td>Data 5</td>
+              <td>Data 6</td>
+              <td>Data 7</td>
+              <td>Data 8</td>
+            </tr>
+            <tr>
+              <td>Data 9</td>
+              <td>Data 10</td>
+              <td>Data 11</td>
+              <td>Data 12</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <h2>Form Controls</h2>
+        <p>
+          Form controls allow users to input and submit data. Common form
+          controls include text fields, checkboxes, radio buttons, and submit
+          buttons.
+        </p>
+        <h3>Text inputs</h3>
+        <label for="text-input">Text Input:</label>
+        <input
+          type="text"
+          id="text-input"
+          name="text-input"
+          placeholder="Write something here"
+          maxlength="40"
+          minlength="2"
+          pattern="[A-Za-z0-9]+"
+          readonly
+          required />
+        <br /><br />
+        <label for="email-input">Email Input:</label>
+        <input
+          type="email"
+          id="email-input"
+          name="email-input"
+          placeholder="Enter your email"
+          required />
+        <br /><br />
+        <label for="tel-input">Phone Number Input:</label>
+        <input
+          type="tel"
+          id="tel-input"
+          name="tel-input"
+          placeholder="Enter your phone number"
+          pattern="[0-9]{10}"
+          required />
+        <br /><br />
+        <h3>Numeric inputs</h3>
+        <label for="number-input">Number Input:</label>
+        <input
+          type="number"
+          id="number-input"
+          name="number-input"
+          placeholder="Enter a number"
+          min="1"
+          max="100"
+          required />
+        <br /><br />
+        <label for="range-input">Range Input:</label>
+        <input
+          type="range"
+          id="range-input"
+          name="range-input"
+          min="0"
+          max="100"
+          required />
+        <br /><br />
+        <h3>Datetime inputs</h3>
+        <label for="date-input">Date Input:</label>
+        <input type="date" id="date-input" name="date-input" required />
+        <br /><br />
+        <label for="time-input">Time Input:</label>
+        <input type="time" id="time-input" name="time-input" required />
+        <br /><br />
+        <label for="datetime-local-input">Datetime Local Input:</label>
+        <input
+          type="datetime-local"
+          id="datetime-local-input"
+          name="datetime-local-input"
+          required />
+        <br /><br />
+        <h3>Selection inputs</h3>
+        <label for="select-input">Select Input:</label>
+        <select id="select-input" name="select-input" required>
+          <option value="">Please choose an option</option>
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+          <option value="option3">Option 3</option>
+        </select>
+        <br /><br />
+        <label for="checkbox-input">Checkbox Input:</label>
+        <input type="checkbox" id="checkbox-input" name="checkbox-input" />
+        <br /><br />
+        <label>Radio Inputs:</label>
+        <input
+          type="radio"
+          id="radio-input1"
+          name="radio-input"
+          value="option1"
+          required />
+        Option 1
+        <input
+          type="radio"
+          id="radio-input2"
+          name="radio-input"
+          value="option2"
+          required />
+        Option 2 <br /><br />
+        <h3>Other inputs</h3>
+        <label for="color-input">Color Input:</label>
+        <input type="color" id="color-input" name="color-input" required />
+        <br /><br />
+        <label for="file-input">File Input:</label>
+        <input
+          type="file"
+          id="file-input"
+          name="file-input"
+          accept="text/plain"
+          required />
+        <br /><br />
+        <h3>Buttons</h3>
+        <button type="button">Click Me</button>
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
       </section>
     </main>
     <footer>
