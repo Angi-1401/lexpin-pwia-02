@@ -1,11 +1,181 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS Display: Flex</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <script src="https://kit.fontawesome.com/c640c833fe.js" crossorigin="anonymous"></script>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #fafafa;
+      font-family: Helvetica, sans-serif;
+      min-height: 100vh;
+    }
+
+    aside {
+      background-color: #333;
+      border-right: 1px solid #333;
+      color: white;
+      height: 100vh;
+    }
+
+    header {
+      background-color: #68c568;
+      border-bottom: 1px solid #68c568;
+    }
+
+    a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem;
+      width: 80px;
+      height: 100%;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-col {
+      flex-direction: column;
+    }
+
+    .justify-end {
+      justify-content: end;
+    }
+
+    .gap-10 {
+      gap: 10px;
+    }
+
+    .gap-20 {
+      gap: 20px;
+    }
+
+    .h-full {
+      height: 100%;
+    }
+
+    .w-full {
+      width: 100%;
+    }
+
+    .px-20 {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .py-10 {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .py-20 {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .hr {
+      margin: 10px 0;
+    }
+
+    .container {
+      border: 1px solid black;
+      border-radius: 1rem;
+    }
+
+    .btn {
+      background-color: #68c568;
+      border: none;
+      border-radius: 50%;
+      color: white;
+      padding: 0.5rem;
+    }
+
+    .btn:hover {
+      background-color: #59a659;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div class="flex">
+      <aside class="px-20 py-10">
+        <h1>Blog</h1>
+        <hr class="hr" />
+        <nav class="flex flex-col gap-20">
+          <a href="#">Dashboard</a>
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+        </nav>
+      </aside>
+      <div class="w-full flex flex-col">
+        <header class="px-20 py-10 flex gap-20">
+          <nav class="flex gap-20">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </nav>
+        </header>
+        <main class="h-full px-20 py-20 flex flex-col gap-20">
+          <section class="flex flex-col gap-10">
+            <div class="container flex gap-20">
+              <img src="./img/patonana.png" alt="One patonana" />
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Numquam quisquam aspernatur quibusdam error vitae. Beatae eum
+                saepe itaque error, quos temporibus vitae odit explicabo dolores
+                non laudantium ab? Est, iure?
+              </p>
+            </div>
+            <div class="flex justify-end gap-10">
+              <button class="btn">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+              <button class="btn">
+                <i class="fa-solid fa-comment"></i>
+              </button>
+            </div>
+          </section>
+           <section class="flex flex-col gap-10">
+            <div class="container flex gap-20">
+              <img src="./img/patonana.png" alt="One patonana" />
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Numquam quisquam aspernatur quibusdam error vitae. Beatae eum
+                saepe itaque error, quos temporibus vitae odit explicabo dolores
+                non laudantium ab? Est, iure?
+              </p>
+            </div>
+            <div class="flex justify-end gap-10">
+              <button class="btn">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+              <button class="btn">
+                <i class="fa-solid fa-comment"></i>
+              </button>
+            </div>
+          </section>
+        </main>
+        <footer class="px-20 py-10 flex">
+          <p>Hecho a punta de puro CSS</p>
+        </footer>
+      </div>
+    </div>
+  </body>
 </html>
