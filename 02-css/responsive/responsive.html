@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <script
+      src="https://kit.fontawesome.com/c640c833fe.js"
+      crossorigin="anonymous"></script>
+    <style>
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #f8f9fa;
+        min-height: 100vh;
+      }
+
+      hr {
+        margin: 1rem 0;
+      }
+
+      footer {
+        padding: 0 1rem;
+      }
+
+      .wrapper {
+        display: flex;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background-color: cornflowerblue;
+        color: white;
+      }
+
+      .header__navigation {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0.5rem 0;
+      }
+
+      .header__navigation a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .sidebar {
+        display: none;
+      }
+
+      .grid-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+      }
+
+      .card {
+        display: flex;
+        gap: 1rem;
+        border: 2px solid cornflowerblue;
+        height: 200px;
+        width: 100%;
+      }
+
+      .card img {
+        width: 200px;
+        height: 100%;
+      }
+
+      .card-content {
+        padding: 1rem 0;
+      }
+
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) {
+        .sidebar {
+          display: block;
+          position: sticky;
+          top: 0;
+          left: 0;
+          background-color: lightgray;
+          padding: 1rem;
+          width: 25%;
+          height: 100vh;
+          overflow-y: auto;
+          scrollbar-width: none;
+        }
+
+        .sidebar__navigation {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          gap: 20px;
+          padding: 0 0.5rem;
+        }
+
+        .sidebar__navigation a {
+          color: black;
+          text-decoration: none;
+        }
+
+        .grid-layout {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .card {
+          flex-direction: column;
+          height: auto;
+        }
+
+        .card img {
+          width: 100%;
+        }
+
+        .card-content {
+          padding: 0 1rem 1rem;
+        }
+      }
+
+      /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: 992px) {
+        .grid-layout {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside class="sidebar">
+        <h1>Blog</h1>
+        <hr />
+        <nav class="sidebar__navigation">
+          <a href="#">Dashboard</a>
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <a href="#">Dashboard</a>
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <a href="#">Dashboard</a>
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <a href="#">Dashboard</a>
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <a href="#">Dashboard</a>
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <a href="#">Dashboard</a>
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <a href="#">Dashboard</a>
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <a href="#">Dashboard</a>
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <a href="#">Dashboard</a>
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <a href="#">Dashboard</a>
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <a href="#">Dashboard</a>
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+        </nav>
+      </aside>
+      <div class="content">
+        <header class="header">
+          <nav class="header__navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </nav>
+        </header>
+        <main class="grid-layout">
+          <section class="card">
+            <img src="./img/patonana.png" alt="One patonana" />
+            <div class="card-content">
+              <p>Lorem ipsum dolor</p>
+            </div>
+          </section>
+          <section class="card">
+            <img src="./img/patonana.png" alt="One patonana" />
+            <div class="card-content">
+              <p>Lorem ipsum dolor</p>
+            </div>
+          </section>
+          <section class="card">
+            <img src="./img/patonana.png" alt="One patonana" />
+            <div class="card-content">
+              <p>Lorem ipsum dolor</p>
+            </div>
+          </section>
+          <section class="card">
+            <img src="./img/patonana.png" alt="One patonana" />
+            <div class="card-content">
+              <p>Lorem ipsum dolor</p>
+            </div>
+          </section>
+          <section class="card">
+            <img src="./img/patonana.png" alt="One patonana" />
+            <div class="card-content">
+              <p>Lorem ipsum dolor</p>
+            </div>
+          </section>
+          <section class="card">
+            <img src="./img/patonana.png" alt="One patonana" />
+            <div class="card-content">
+              <p>Lorem ipsum dolor</p>
+            </div>
+          </section>
+          <section class="card">
+            <img src="./img/patonana.png" alt="One patonana" />
+            <div class="card-content">
+              <p>Lorem ipsum dolor</p>
+            </div>
+          </section>
+          <section class="card">
+            <img src="./img/patonana.png" alt="One patonana" />
+            <div class="card-content">
+              <p>Lorem ipsum dolor</p>
+            </div>
+          </section>
+          <section class="card">
+            <img src="./img/patonana.png" alt="One patonana" />
+            <div class="card-content">
+              <p>Lorem ipsum dolor</p>
+            </div>
+          </section>
+          <section class="card">
+            <img src="./img/patonana.png" alt="One patonana" />
+            <div class="card-content">
+              <p>Lorem ipsum dolor</p>
+            </div>
+          </section>
+        </main>
+        <footer>
+          <p>Hecho a punta de puro CSS</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
