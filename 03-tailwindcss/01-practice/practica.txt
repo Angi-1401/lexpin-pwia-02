@@ -1,0 +1,2 @@
+Utilizando sólo TailwindCSS, crea el layout utilizado por la primera sección de la página de inicio del sitio web de TailwindCSS. :D
+(Ver foto de referencia).
