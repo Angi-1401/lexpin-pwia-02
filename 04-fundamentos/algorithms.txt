@@ -1,0 +1,75 @@
+Algoritmos
+
+Un algoritmo es un conjunto de instrucciones o pasos que se siguen para realizar una tarea o resolver un problema específico.
+
+Características de un algoritmo:
+1. Finito: Debe tener un número limitado de pasos.
+2. Definido: Cada paso debe estar claramente especificado.
+3. Entrada: Puede recibir datos de entrada.
+4. Salida: Debe producir un resultado o salida.
+5. Efectividad: Cada paso debe ser realizable y comprensible.
+
+
+Objetivo a alcanzar:
+Pan tostado.
+
+LÓGICO - SECUENCIAL
+
+1. Conseguir pan de sándwich.
+2. Prender la cocina.
+3. Montar un sartén en la cocina.
+4. ¿El pan lleva mantequilla?
+4.1. Respuesta afirmativa:
+  4.1.1. Buscar cuchillo y mantequilla.
+  4.1.2. Untar mantequilla en el pan.
+4.2. Respuesta negativa:
+  4.2.1. No hacer nada.
+5. Colocar el pan en la sartén.
+6. Dejar 1 min. el pan en la sartén.
+7. Retirar el pan de la sartén.
+8. Servir el pan en un plato.
+
+FELICIDADES, NOS COMPLICAMOS LA EXISTENCIA POR UN PAN TOSTADOOOOOOOOOO :DDDDDDDDD
+
+Instrucciones que entiende una computadora:
+1. Representación de datos.
+2. Lugares donde guardar datos.
+3. Operaciones matemáticas básicas que se pueden realizar con los datos.
+4. Operaciones lógicas que se pueden realizar con los datos.
+6. Condiciones (si ocurre algo, hacer una cosa; de lo contrario, hacer otra).
+7. Repeticiones (hacer algo varias veces).
+
+--------------------
+
+Ejercicios para reforzar el pensamiento.
+Resolver bien sea con una lista de pasos o un diagrama de flujo.
+
+--------------------
+
+Problema 1: Crear las reglas para determinar si una persona puede acceder a una actividad según su edad.
+
+Reglas a seguir:
+- Si la edad es menor que 12, el acceso no está permitido.
+- Si la edad está entre 12 y 17, el acceso está permitido con acompañamiento.
+- Si la edad es 18 o más, el acceso está permitido sin acompañamiento.
+
+--------------------
+
+Problema 2: Crear las reglas para determinar el descuento que recibe un cliente según el valor total de su compra.
+
+Reglas a seguir:
+- Si la compra es menor que $50, no se aplica ningún descuento.
+- Si la compra es de $50 o más, pero menor que $100, se aplica un descuento del 5 %.
+- Si la compra es de $100 o más, se aplica un descuento del 10%.
+
+--------------------
+
+Problema: Crear un algoritmo que permita calificar múltiples pruebas según la nota obtenida.
+
+Reglas a seguir:
+- Solicitar la calificación la prueba.
+- Si la calificacióne es menor que 60, el estudiante reprueba.
+- Si la calificación es mayor o igual que 60, el estudiante aprueba.
+- Repetir el proceso hasta agotar las calificaciones.
+
+--------------------

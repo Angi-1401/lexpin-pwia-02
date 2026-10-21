@@ -10,134 +10,369 @@
     <title>Control Panel</title>
 
     <!-- TailwindCSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- FontAwesome -->
     <script
       src="https://kit.fontawesome.com/c640c833fe.js"
       crossorigin="anonymous"></script>
-    <!-- Flowbite -->
+    <!-- Animate.css -->
     <link
-      href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css"
-      rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   </head>
-  <body class="h-screen bg-slate-100 dark:bg-slate-800 dark:text-white">
-    <div class="flex h-full">
-      <aside
-        class="hidden md:flex md:flex-col md:justify-between md:bg-slate-900 md:border-r md:border-slate-700 md:p-4 md:w-64 md:h-full md:sticky md:top-0 md:left-0 md:z-50">
-        <div id="sidebar-navigation" class="flex flex-col gap-4 overflow-auto">
-          <h1 class="text-2xl font-bold">Dashboard</h1>
-          <hr class="border-slate-300 dark:border-slate-700" />
-          <nav>
-            <ul class="flex flex-col gap-4">
-              <a href="#">
-                <li
-                  class="flex justify-start items-center gap-4 p-2 rounded bg-blue-400 dark:bg-blue-600">
-                  <i class="fa-solid fa-house"></i>
-                  Inicio
-                </li>
-              </a>
-              <a href="#">
-                <li
-                  class="flex justify-start items-center gap-4 p-2 rounded border border-transparent hover:border-blue-400 dark:hover:border-blue-600">
-                  <i class="fa-solid fa-user"></i>
-                  Usuarios
-                </li>
-              </a>
-              <a href="#">
-                <li
-                  class="flex justify-start items-center gap-4 p-2 rounded border border-transparent hover:border-blue-400 dark:hover:border-blue-600">
-                  <i class="fa-solid fa-box"></i>
-                  Productos
-                </li>
-              </a>
-              <a href="#">
-                <li
-                  class="flex justify-start items-center gap-4 p-2 rounded border border-transparent hover:border-blue-400 dark:hover:border-blue-600">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  Pedidos
-                </li>
-              </a>
-              <a href="#">
-                <li
-                  class="flex justify-start items-center gap-4 p-2 rounded border border-transparent hover:border-blue-400 dark:hover:border-blue-600">
-                  <i class="fa-solid fa-chart-line"></i>
-                  Reportes
-                </li>
-              </a>
-              <a href="#">
-                <li
-                  class="flex justify-start items-center gap-4 p-2 rounded border border-transparent hover:border-blue-400 dark:hover:border-blue-600">
-                  <i class="fa-solid fa-cog"></i>
-                  Configuración
-                </li>
-              </a>
-            </ul>
-          </nav>
-        </div>
-        <div id="sidebar-profile" class="flex flex-col gap-4">
-          <hr class="border-slate-300 dark:border-slate-700" />
-          <div class="flex justify-between">
-            <button>
-              <img
-                src="./img/profile.jpg"
-                alt="Profile Picture"
-                class="w-10 h-10 rounded-full" />
-            </button>
-            <button
-              class="p-2 rounded hover:bg-slate-400 dark:hover:bg-slate-600">
-              <i class="fa-solid fa-right-from-bracket"></i>
-            </button>
-          </div>
-        </div>
-      </aside>
-      <div class="flex-1 overflow-hidden">
-        <header
-          class="flex justify-between items-center p-4 h-[70px] bg-slate-900 border-b border-slate-400 dark:border-slate-700 sticky top-0 z-50">
-          <button
-            class="p-2 rounded hover:bg-slate-400 dark:hover:bg-slate-600 md:hidden">
-            <i class="fa-solid fa-bars"></i>
+  <body
+    class="min-h-screen flex bg-slate-100 dark:bg-slate-800 dark:text-white">
+    <aside
+      class="hidden md:flex md:flex-col md:justify-between md:bg-slate-300 md:dark:bg-slate-900 md:border-r md:border-slate-700 md:p-4 md:w-64 md:h-screen md:sticky md:top-0 md:left-0 md:z-50">
+      <div id="sidebar-navigation" class="flex flex-col gap-4">
+        <h1 class="animate__animated animate__backInDown text-2xl font-bold">Dashboard</h1>
+        <hr class="border-slate-300 dark:border-slate-700" />
+        <nav>
+          <ul class="flex flex-col gap-4">
+            <a href="#">
+              <li
+                class="flex justify-start items-center gap-4 p-2 rounded bg-blue-400 dark:bg-blue-600">
+                <i class="fa-solid fa-house"></i>
+                Inicio
+              </li>
+            </a>
+            <a href="#">
+              <li
+                class="flex justify-start items-center gap-4 p-2 rounded border border-transparent hover:border-blue-400 dark:hover:border-blue-600">
+                <i class="fa-solid fa-user"></i>
+                Usuarios
+              </li>
+            </a>
+            <a href="#">
+              <li
+                class="flex justify-start items-center gap-4 p-2 rounded border border-transparent hover:border-blue-400 dark:hover:border-blue-600">
+                <i class="fa-solid fa-box"></i>
+                Productos
+              </li>
+            </a>
+            <a href="#">
+              <li
+                class="flex justify-start items-center gap-4 p-2 rounded border border-transparent hover:border-blue-400 dark:hover:border-blue-600">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Pedidos
+              </li>
+            </a>
+            <a href="#">
+              <li
+                class="flex justify-start items-center gap-4 p-2 rounded border border-transparent hover:border-blue-400 dark:hover:border-blue-600">
+                <i class="fa-solid fa-chart-line"></i>
+                Reportes
+              </li>
+            </a>
+            <a href="#">
+              <li
+                class="flex justify-start items-center gap-4 p-2 rounded border border-transparent hover:border-blue-400 dark:hover:border-blue-600">
+                <i class="fa-solid fa-cog"></i>
+                Configuración
+              </li>
+            </a>
+          </ul>
+        </nav>
+      </div>
+      <div id="sidebar-profile" class="flex flex-col gap-4">
+        <hr class="border-slate-300 dark:border-slate-700" />
+        <div class="flex justify-between">
+          <button>
+            <img
+              src="./img/profile.jpg"
+              alt="Profile Picture"
+              class="w-10 h-10 rounded-full" />
           </button>
-          <input
-            type="text"
-            placeholder="Buscar..."
-            class="hidden md:block md:p-2 md:w-[30%] md:rounded md:border md:border-slate-400 md:dark:border-slate-700 md:bg-slate-200 md:dark:bg-slate-800 md:text-slate-900 md:dark:text-slate-100" />
-          <div class="flex gap-4">
-            <button
-              class="p-2 rounded hover:bg-slate-400 dark:hover:bg-slate-600 md:hidden">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-            <button
-              class="p-2 rounded hover:bg-slate-400 dark:hover:bg-slate-600">
-              <i class="fa-solid fa-bell"></i>
-            </button>
-            <button
-              class="p-2 rounded hover:bg-slate-400 dark:hover:bg-slate-600">
-              <i class="fa-solid fa-comment"></i>
-            </button>
-            <button>
-              <img
-                src="./img/profile.jpg"
-                alt="Profile Picture"
-                class="w-10 h-10 rounded-full" />
-            </button>
-          </div>
-        </header>
-        <div class="overflow-auto h-full">
-          <main>
-            <div class="h-40 w-full border"></div>
-            <div class="h-40 w-full border"></div>
-            <div class="h-40 w-full border"></div>
-            <div class="h-40 w-full border"></div>
-            <div class="h-40 w-full border"></div>
-            <div class="h-40 w-full border"></div>
-            <div class="h-40 w-full border"></div>
-            <div class="h-40 w-full border"></div>
-            <div class="h-40 w-full border"></div>
-          </main>
-          <footer></footer>
+          <button
+            class="p-2 rounded hover:bg-slate-400 dark:hover:bg-slate-600">
+            <i class="fa-solid fa-right-from-bracket"></i>
+          </button>
         </div>
       </div>
+    </aside>
+    <div id="wrapper" class="flex-1 min-w-0 scrollbar-none">
+      <header
+        class="flex justify-between items-center p-4 h-[70px] bg-slate-300 dark:bg-slate-900 border-b border-slate-400 dark:border-slate-700 sticky top-0 z-50">
+        <button
+          class="p-2 rounded hover:bg-slate-400 dark:hover:bg-slate-600 md:hidden">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <input
+          type="text"
+          placeholder="Buscar..."
+          class="hidden md:block md:p-2 md:w-[30%] md:rounded md:border md:border-slate-400 md:dark:border-slate-700 md:bg-slate-200 md:dark:bg-slate-800 md:text-slate-900 md:dark:text-slate-100" />
+        <div class="flex gap-4">
+          <button
+            class="p-2 rounded hover:bg-slate-400 dark:hover:bg-slate-600 md:hidden">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button
+            class="p-2 rounded hover:bg-slate-400 dark:hover:bg-slate-600">
+            <i class="fa-solid fa-bell"></i>
+          </button>
+          <button
+            class="p-2 rounded hover:bg-slate-400 dark:hover:bg-slate-600">
+            <i class="fa-solid fa-comment"></i>
+          </button>
+          <button>
+            <img
+              src="./img/profile.jpg"
+              alt="Profile Picture"
+              class="w-10 h-10 rounded-full" />
+          </button>
+        </div>
+      </header>
+      <main class="flex flex-1 flex-col gap-4 p-4">
+        <section
+          id="kpi"
+          class="grid grid-cols-2 justify-between items-center gap-4 md:grid-cols-4">
+          <div
+            class="flex flex-col justify-center items-center p-4 h-40 w-full bg-blue-400 rounded dark:bg-blue-600">
+            <div
+              class="flex flex-1 justify-center items-center gap-2 text-5xl md:flex-col md:text-4xl lg:flex-row lg:text-5xl">
+              <i class="fa-solid fa-basket-shopping"></i>
+              <p class="text-white text-center">100</p>
+            </div>
+            <p class="text-white text-center">Ventas</p>
+          </div>
+          <div
+            class="flex flex-col justify-center items-center p-4 h-40 w-full bg-blue-400 rounded dark:bg-blue-600">
+            <div
+              class="flex flex-1 justify-center items-center gap-2 text-5xl md:flex-col md:text-4xl lg:flex-row lg:text-5xl">
+              <i class="fa-solid fa-dollar-sign"></i>
+              <p class="text-white text-center">300</p>
+            </div>
+            <p class="text-white text-center">Ganancias</p>
+          </div>
+          <div
+            class="flex flex-col justify-center items-center p-4 h-40 w-full bg-blue-400 rounded dark:bg-blue-600">
+            <div
+              class="flex flex-1 justify-center items-center gap-2 text-5xl md:flex-col md:text-4xl lg:flex-row lg:text-5xl">
+              <i class="fa-solid fa-user"></i>
+              <p class="text-white text-center">50</p>
+            </div>
+            <p class="text-white text-center">Usuarios</p>
+          </div>
+          <div
+            class="flex flex-col justify-center items-center p-4 h-40 w-full bg-blue-400 rounded dark:bg-blue-600">
+            <div
+              class="flex flex-1 justify-center items-center gap-2 text-5xl md:flex-col md:text-4xl lg:flex-row lg:text-5xl">
+              <i class="fa-solid fa-handshake"></i>
+              <p class="text-white text-center">30</p>
+            </div>
+            <p class="text-white text-center">Clientes</p>
+          </div>
+        </section>
+        <section id="users-datatable" class="flex flex-col gap-4 p-4">
+          <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-200">
+            Usuarios
+          </h2>
+          <table class="min-w-full bg-white dark:bg-gray-800">
+            <thead>
+              <tr class="text-left">
+                <th
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  ID
+                </th>
+                <th
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  Nombre
+                </th>
+                <th
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  Correo
+                </th>
+                <th
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  Acciones
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  1
+                </td>
+                <td
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  Juan Pérez
+                </td>
+                <td
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  juan@example.com
+                </td>
+                <td
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  <div class="flex gap-2">
+                    <button class="bg-blue-500 text-white px-2 py-1 rounded">
+                      <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <button class="bg-red-500 text-white px-2 py-1 rounded">
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  2
+                </td>
+                <td
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  María López
+                </td>
+                <td
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  maria@example.com
+                </td>
+                <td
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  <div class="flex gap-2">
+                    <button class="bg-blue-500 text-white px-2 py-1 rounded">
+                      <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <button class="bg-red-500 text-white px-2 py-1 rounded">
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  3
+                </td>
+                <td
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  Carlos García
+                </td>
+                <td
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  carlos@example.com
+                </td>
+                <td
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  <div class="flex gap-2">
+                    <button class="bg-blue-500 text-white px-2 py-1 rounded">
+                      <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <button class="bg-red-500 text-white px-2 py-1 rounded">
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="records-datatable" class="flex flex-col gap-4 p-4">
+          <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-200">
+            Últimos registros
+          </h2>
+          <table class="min-w-full bg-white dark:bg-gray-800">
+            <thead>
+              <tr class="text-left">
+                <th
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  ID
+                </th>
+                <th
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  Nombre
+                </th>
+                <th
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  Acción
+                </th>
+                <th
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  Fecha y hora
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  1
+                </td>
+                <td
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  <div class="flex justify-start items-center gap-2">
+                    <img
+                      src="./img/profile.jpg"
+                      alt="Juan Pérez"
+                      class="w-10 h-10 rounded-full" />
+                    Juan Pérez
+                  </div>
+                </td>
+                <td
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  Venta de stock
+                </td>
+                <td
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  2026-06-05 14:30
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  2
+                </td>
+                <td
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  <div class="flex justify-start items-center gap-2">
+                    <img
+                      src="./img/profile.jpg"
+                      alt="Juan Pérez"
+                      class="w-10 h-10 rounded-full" />
+                    María López
+                  </div>
+                </td>
+                <td
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  Rebalance
+                </td>
+                <td
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  2026-06-05 15:30
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  3
+                </td>
+                <td
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  <div class="flex justify-start items-center gap-2">
+                    <img
+                      src="./img/profile.jpg"
+                      alt="Juan Pérez"
+                      class="w-10 h-10 rounded-full" />
+                    Carlos García
+                  </div>
+                </td>
+                <td
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  Rebalance
+                </td>
+                <td
+                  class="py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+                  2026-06-05 15:30
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+      <footer class="bg-gray-800 text-white py-4 text-center">
+        &copy; 2026 Hecho con ❤️ en Lexpin: Programación Fullstack + IA (2da.
+        Edición)
+|      </footer>
     </div>
   </body>
 </html>
