@@ -94,3 +94,9 @@ console.log(`My name is ${firstName} and I am ${age} years old.`);
  * String concatenation uses the + operator to combine strings and variables.
  * Template literals use backticks (`) and ${} to embed variables directly.
  */
+
+// Verify data type on variables using typeof operator
+console.log(typeof firstName);
+console.log(typeof age);
+console.log(typeof isStudent);
+console.log(typeof pi);
