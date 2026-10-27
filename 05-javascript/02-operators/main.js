@@ -148,29 +148,117 @@ console.log(p && (q || !p));
  * executing the code:
  */
 
-// Easy level:
 console.log("Easy level:");
+
+/**
+ * Paso 1: comparar 5 con 3 usando el operador "mayor que".
+ * Paso 2: como 5 es mayor que 3, el resultado booleano es true.
+ */
 console.log(5 > 3); // true
+
+/**
+ * Paso 1: evaluar 10 <= 10 -> true (son iguales).
+ * Paso 2: evaluar 4 > 5 -> false (4 no es mayor que 5).
+ * Paso 3: unir con &&: true && false -> false (ambos deben ser true).
+ */
 console.log(10 <= 10 && 4 > 5); // false
-console.log(!true || 7 === 7); // true 
+
+/**
+ * Paso 1: aplicar ! a true -> false.
+ * Paso 2: evaluar 7 === 7 -> true (mismo valor y mismo tipo).
+ * Paso 3: unir con ||: false || true -> true (basta con que uno sea true).
+ */
+console.log(!true || 7 === 7); // true
+
+/**
+ * Paso 1: comparar las cadenas carácter por carácter según su código Unicode.
+ * Paso 2: "a" (97) va antes que "b" (98), por lo que "apple" es menor.
+ * Paso 3: el resultado es true.
+ */
 console.log("apple" < "banana"); // true
 
-// Intermediate level:
 console.log("Intermediate level:");
+/**
+ * Paso 1: 10 == "10" usa igualdad no estricta, así que "10" se convierte a 10 -> true.
+ * Paso 2: 5 !== "5" usa desigualdad estricta y los tipos son distintos (number vs string) -> true.
+ * Paso 3: unir con &&: true && true -> true.
+ */
 console.log(10 == "10" && 5 !== "5"); // true
+
+/**
+ * Paso 1: resolver el paréntesis: true && false -> false.
+ * Paso 2: unir con ||: false || true -> true.
+ * Paso 3: el resultado final es true.
+ */
 console.log((true && false) || true); // true
+
+/**
+ * Paso 1: dentro del paréntesis, 5 > 3 -> true, y !true -> false.
+ * Paso 2: dentro del otro paréntesis, 2 <= 2 -> true.
+ * Paso 3: 4 != "4" convierte "4" a 4 y compara -> false.
+ * Paso 4: unir el segundo paréntesis: true && false -> false.
+ * Paso 5: unir todo: false || false -> false.
+ */
 console.log(!(5 > 3) || (2 <= 2 && 4 != "4")); // false
+
+/**
+ * Paso 1: 0 == false convierte false a 0 -> 0 == 0 -> true.
+ * Paso 2: "" == false convierte "" a 0 y false a 0 -> 0 == 0 -> true.
+ * Paso 3: unir con &&: true && true -> true.
+ */
 console.log(0 == false && "" == false); // true
 
-// Advanced level:
 console.log("Advanced level:");
+/**
+ * Paso 1: null > 0 convierte null a 0 -> 0 > 0 -> false.
+ * Paso 2: null < 0 -> 0 < 0 -> false.
+ * Paso 3: null == 0 es false porque la igualdad con null no hace coerción numérica.
+ * Paso 4: unir con ||: false || false || false -> false.
+ */
 console.log(null > 0 || null < 0 || null == 0); // false
+
+/**
+ * Paso 1: [] == false convierte [] a "" y luego a 0, y false a 0 -> 0 == 0 -> true.
+ * Paso 2: [].length === 0 -> 0 === 0 -> true.
+ * Paso 3: unir con &&: true && true -> true.
+ */
 console.log([] == false && [].length === 0); // true
+
+/**
+ * Paso 1: "5" > 3 convierte "5" a número -> 5 > 3 -> true.
+ * Paso 2: "3" < "10" compara como texto: "3" va después de "1", así que es false.
+ * Paso 3: unir con &&: true && false -> false.
+ */
 console.log("5" > 3 && "3" < "10"); // false
+
+/**
+ * Paso 1: NaN !== NaN es true porque NaN nunca es igual a sí mismo.
+ * Paso 2: 0 / 0 produce NaN, y NaN === NaN es false.
+ * Paso 3: unir con ||: true || false -> true.
+ */
 console.log(NaN !== NaN || 0 / 0 === NaN); // true
 
-// Legend level:
 console.log("Legend level:");
+/**
+ * Paso 1: [] es un objeto truthy, por lo que ![] -> false.
+ * Paso 2: ![] == ![] -> false == false -> true.
+ * Paso 3: [] == ![] -> [] == false; [] se convierte a "" y luego a 0, y false a 0 -> true.
+ * Paso 4: unir con &&: true && true -> true.
+ */
 console.log(![] == ![] && [] == ![]); // Cosa fea. true
+
+/**
+ * Paso 1: null >= 0 convierte null a 0 -> 0 >= 0 -> true.
+ * Paso 2: null <= 0 -> 0 <= 0 -> true.
+ * Paso 3: null == 0 es false (la igualdad con null no convierte a número).
+ * Paso 4: unir con &&: true && true && false -> false.
+ */
 console.log(null >= 0 && null <= 0 && null == 0); // false
+
+/**
+ * Paso 1: !undefined -> true y !null -> true, así que true === true -> true.
+ * Paso 2: undefined == null es true por la regla especial de igualdad no estricta.
+ * Paso 3: undefined !== null es true porque son de tipos distintos.
+ * Paso 4: unir con &&: true && true && true -> true.
+ */
 console.log(!undefined === !null && undefined == null && undefined !== null); // true
