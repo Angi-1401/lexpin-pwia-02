@@ -3,7 +3,7 @@
  * realizadas en un supermercado.
  */
 
-let salesRecord = [
+let ventas = [
   {
     id_compra: "C-001",
     fecha: "2026-10-25",
@@ -75,3 +75,22 @@ let salesRecord = [
  * 7. Accede al precio unitario del segundo item de la segunda compra.
  * 8. Accede al precio unitario del "Café Tostado" de la tercera compra.
  */
+
+console.log(`ID de la primera compra: ${ventas[0].id_compra}`);
+console.log(`Sucursal de la segunda compra: ${ventas[1].sucursal}`);
+console.log(
+  `Cliente de la tercera compra: ${JSON.stringify(ventas[2].cliente)}`,
+);
+console.log(
+  `Nombre del cliente de la segunda compra: ${ventas[1].cliente.nombre}`,
+);
+console.log(`Método de pago de la quinta compra: ${ventas[4].pago.metodo}`);
+console.log(
+  `Cantidad del primer item de la primera compra: ${ventas[0].items[0].cantidad}`,
+);
+console.log(
+  `Precio unitario del segundo item de la segunda compra: ${ventas[1].items[1].precio_unitario}`,
+);
+console.log(
+  `Precio unitario del "Café Tostado" de la tercera compra: ${ventas[2].items[1].precio_unitario}`,
+);

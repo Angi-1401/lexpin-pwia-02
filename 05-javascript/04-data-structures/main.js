@@ -80,8 +80,8 @@ console.log(`Fruits after reverse: ${fruits}`);
 /**
  * Data structures
  *
- * - Object: a collection of key-value pairs, where keys are strings and values
- * can be any type.
+ * - Object: a collection of key-value pairs, where keys are strings
+ * and values can be any type.
  */
 
 console.log("Creating objects:");
