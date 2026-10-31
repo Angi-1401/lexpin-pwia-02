@@ -138,6 +138,3 @@ for (let value of numbers) {
  *  to use for...of loop for arrays and
  *  for...in loop for objects
  */
-
-
-
