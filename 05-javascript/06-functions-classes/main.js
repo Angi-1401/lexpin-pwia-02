@@ -106,7 +106,7 @@ class Cat extends Animal {
 }
 
 const myDog = new Dog("Firulai", 3, "Golden Retriever");
-console.log(myDog);
+console.log(myDog.name);
 myDog.bark();
 myDog.run();
 
