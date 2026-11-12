@@ -30,16 +30,16 @@ class Todo {
         <button id="complete-todo" class="bg-green-600 text-white rounded-2xl px-4 py-2 hover:bg-green-700 focus:outline-none focus:ring-0 hover:cursor-pointer" onClick="markTodoAsComplete(${this.id})">
           Complete
         </button>
-        <button id="update-todo" class="bg-yellow-600 text-white rounded-2xl px-4 py-2 hover:bg-yellow-700 focus:outline-none focus:ring-0 hover:cursor-pointer">Update</button>
+        <button id="update-todo" class="bg-yellow-600 text-white rounded-2xl px-4 py-2 hover:bg-yellow-700 focus:outline-none focus:ring-0 hover:cursor-pointer" onClick="updateTodo(${this.id})">
+          Update
+        </button>
         <button id="delete-todo" class="bg-red-600 text-white rounded-2xl px-4 py-2 hover:bg-red-700 focus:outline-none focus:ring-0 hover:cursor-pointer" onClick="deleteTodo(${this.id})">
           Delete
         </button>
       </div>
       `
     } 
-    
   `;
-
     return todoItem;
   }
 }
@@ -50,6 +50,7 @@ const addButton = document.getElementById("create-todo");
 const todoList = document.getElementById("todo-list");
 const completeTodoList = document.getElementById("complete-todo-list");
 
+// Function to render todos in the pending and completed lists
 const renderTodos = () => {
   todoList.innerHTML = "";
   completeTodoList.innerHTML = "";
@@ -65,6 +66,7 @@ const renderTodos = () => {
   }
 };
 
+// Function to create a new todo item
 const createTodo = () => {
   const todoText = todoInput.value;
   if (todoText === "") return;
@@ -73,12 +75,12 @@ const createTodo = () => {
   let todo = new Todo(id, todoText);
 
   todos.push(todo);
-  console.log(todo);
   renderTodos();
 
   todoInput.value = "";
 };
 
+// Function to mark a todo as complete
 const markTodoAsComplete = (id) => {
   let todo = todos.find((todo) => todo.id === id);
   if (todo) todo.markAsComplete();
@@ -86,17 +88,31 @@ const markTodoAsComplete = (id) => {
   completeTodos.push(todo);
   deleteTodo(id);
   renderTodos();
-  console.log(todos);
-  console.log(completeTodos);
 };
 
-const updateTodo = (id) => {};
+// Function to update a todo item
+const updateTodo = (id) => {
+  let todo = todos.find((todo) => todo.id === id);
+  
+  if (todo) {
+    const newText = prompt("Update the task:", todo.text);
+    if (newText !== null && newText !== "") {
+      todo.text = newText;
+      renderTodos();
+    }
+  }
 
+  alert("Task updated successfully!");
+};
+
+// Function to delete a todo item
 const deleteTodo = (id) => {
   todos = todos.filter((todo) => todo.id !== id);
   renderTodos();
 };
 
+// Event listener for the create todo button
+// This will trigger the creation of a new todo item when the button is clicked
 addButton.addEventListener("click", (event) => {
   event.preventDefault();
   createTodo();

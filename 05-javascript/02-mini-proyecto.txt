@@ -1,0 +1,34 @@
+Ejercicio 1:
+
+Escribir un programa que permita al usuario jugar piedra, papel o tijeras contra la computadora.
+El programa debe:
+- Solicitar al usuario su elección.
+- Generar aleatoriamente la elección de la computadora.
+- Determinar el ganador según las reglas del juego.
+- Mostrar el resultado al usuario.
+- Registrar y mostrar el historial de resultados de las últ. cinco partidas jugadas.
+
+El estudiante es libre de diseñar la interfaz y la presentación del juego según su creatividad.
+
+----------------------------------------
+
+Ejercicio 2:
+
+Escribir un programa que simule una calculadora.
+El programa debe:
+- Replicar con HTML la interfaz de una calculadora estándar.
+- Implementar la lógica de la calculadora con JavaScript.
+- Permitir al usuario realizar operaciones básicas: suma, resta, multiplicación y división.
+- Mostrar el resultado de las operaciones al usuario.
+
+----------------------------------------
+
+Ejercicio 3:
+
+Escribir un programa que permita simular un carrito de compras.
+El programa debe:
+- Permitir al usuario agregar productos al carrito desde una selección de productos disponible (por ejemplo, una lista de productos con sus precios).
+- Permitir al usuario eliminar productos del carrito.
+- Recalcular en tiempo real el total de la compra cada vez que se agregue o elimine un producto.
+
+El estudiante es libre de diseñar la interfaz y la presentación del carrito de compras según su creatividad.
