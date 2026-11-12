@@ -10,22 +10,25 @@
     <div class="flex flex-col gap-4">
       <h1 class="text-2xl">To-Do List</h1>
       <form id="todo-form" class="flex flex-col gap-2">
-        <label for="new-todo" class="text-sm">New Task</label>
+        <label for="todo-input" class="text-sm">New Task</label>
         <div class="flex gap-4">
           <input
             type="text"
-            id="new-todo"
+            id="todo-input"
             class="border border-blue-600 rounded-2xl px-4 py-2 focus:outline-none focus:ring-0"
             placeholder="Add a new task" />
           <button
             type="submit"
-            id="add-todo"
+            id="create-todo"
             class="bg-blue-600 text-white rounded-2xl px-4 py-2 hover:bg-blue-700 focus:outline-none focus:ring-0 hover:cursor-pointer">
             Add Task
           </button>
         </div>
       </form>
       <ul id="todo-list" class="bg-gray-200 p-4 rounded-lg dark:bg-gray-900">
+        <!-- To-Do items will be appended here dynamically -->
+      </ul>
+      <ul id="complete-todo-list" class="bg-gray-200 p-4 rounded-lg dark:bg-gray-900">
         <!-- To-Do items will be appended here dynamically -->
       </ul>
     </div>
