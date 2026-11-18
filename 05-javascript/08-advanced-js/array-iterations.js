@@ -136,12 +136,22 @@ button(...buttonAttributes);
  */
 const calificaciones = [45, 88, 92, 59, 74, 30, 100];
 
+calificaciones.forEach((nota, index) => {
+  if (nota >= 60) {
+    console.log(`Estudiante ${index + 1}: Aprueba`);
+  } else {
+    console.log(`Estudiante ${index + 1}: Reprueba`);
+  }
+});
+
 /**
  * Los siguientes productos aplican para un descuento del 15%.
  * Crea un nuevo array que contenga los precios con el descuento aplicado.
  */
 const precios = [100, 250, 50, 400, 120];
 
+const preciosConDescuento = precios.map((precio) => precio * 0.85);
+console.log(preciosConDescuento);
 
 /**
  * Para el siguiente stock de productos, crea un nuevo array compuesto únicamente por los
@@ -155,6 +165,11 @@ const productos = [
   { nombre: "Monitor", categoria: "tecnologia", precio: 300 },
 ];
 
+const productosFiltrados = productos.filter(
+  (producto) => producto.categoria === "tecnologia" && producto.precio < 500
+);
+console.log(productosFiltrados);
+
 /**
  * Encuentra al primer usuario cuyo rol sea admin.
  */
@@ -165,6 +180,9 @@ const usuarios = [
   { id: 4, nombre: "David", rol: "admin" },
 ];
 
+const primerAdmin = usuarios.find((usuario) => usuario.rol === "admin");
+console.log(primerAdmin);
+
 /**
  * Calcula el total del siguiente carrito de compras
  */
@@ -173,5 +191,11 @@ const carrito = [
   { producto: "Pluma", precio: 3, cantidad: 5 },
   { producto: "Cuaderno", precio: 7, cantidad: 3 },
 ];
+
+const totalCarrito = carrito.reduce(
+  (total, item) => total + item.precio * item.cantidad,
+  0
+);
+console.log(totalCarrito);
 
 // Prohibido usar: Ciclos for, while. ;)
