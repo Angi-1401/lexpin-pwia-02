@@ -14,6 +14,9 @@
 // Hexadecimal color (e.g., #FFFFFF or #FFF)
 // ^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$
 
+// Spanish Text
+// ^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$
+
 const passwordPattern =
   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
