@@ -1,0 +1,12 @@
+Realizar un formulario en HTML que contenga:
+1. Un campo de texto para el nombre.
+2. Un campo de texto para el apellido.
+3. Un campo numérico para la edad.
+4. Un campo de texto para el correo electrónico.
+5. Un campo de texto para el teléfono (formato internacional o venezolano).
+6. Dos campos para contraseña (uno para la contraseña y otro para confirmarla).
+7. Un botón para enviar el formulario.
+
+El formulario debe validar que todos los campos estén completos (no estén vacíos) y sean válidos (regex) antes de enviarse. Además, debe validar que la contraseña y la confirmación de la contraseña coincidan.
+
+Al presionar el botón de envío, si todo está correcto, se debe mostrar un mensaje de éxito tras 2 segundos; de lo contrario, se deben mostrar los errores correspondientes.
