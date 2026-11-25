@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Persistence</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <h1>Data Persistence with Local Storage, Session Storage and Cookies</h1>
+    <form>
+      <div class="flex gap-4 p-2">
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          class="border rounded" />
+      </div>
+      <div class="flex gap-4 p-2">
+        <button type="button" class="border rounded" onClick="saveToLocal()">
+          Save to Local Storage
+        </button>
+        <button type="button" class="border rounded" onClick="saveToSession()">
+          Save to Session Storage
+        </button>
+        <button type="button" class="border rounded" onClick="saveCookies()">
+          Save Cookies
+        </button>
+      </div>
+      <div class="flex gap-4 p-2">
+        <button type="button" class="border rounded" onClick="clearAll()">
+          Clear All
+        </button>
+      </div>
+    </form>
+    <table>
+      <tr class="flex gap-4">
+        <th>Local Storage</th>
+        <th>Session Storage</th>
+        <th>Cookies</th>
+      </tr>
+      <tr id="output" class="flex gap-4"></tr>
+    </table>
+  </body>
+
+  <script>
+    const loadLocalStorage = () => {
+      const tdLocal = document.createElement("td");
+      const localUser = JSON.parse(localStorage.getItem("user"));
+      tdLocal.textContent = localUser?.username || "";
+      return tdLocal;
+    };
+
+    const loadSessionStorage = () => {
+      const tdSession = document.createElement("td");
+      const sessionUser = JSON.parse(sessionStorage.getItem("user"));
+      tdSession.textContent = sessionUser?.username || "";
+      return tdSession;
+    };
+
+    const loadCookies = () => {
+      const tdCookies = document.createElement("td");
+      const cookies = document.cookie
+        .split("; ")
+        .find((row) => row.startsWith("username="));
+      tdCookies.textContent = cookies ? cookies.split("=")[1] : "";
+      return tdCookies;
+    };
+
+    const saveToLocal = () => {
+      const usernameInput = document.getElementById("username");
+      const output = document.getElementById("output");
+      // localStorage.setItem("username", usernameInput.value);
+
+      let user = { username: usernameInput.value };
+      localStorage.setItem("user", JSON.stringify(user));
+
+      output.appendChild(loadLocalStorage());
+    };
+
+    const saveToSession = () => {
+      const usernameInput = document.getElementById("username");
+      const output = document.getElementById("output");
+      // sessionStorage.setItem("username", usernameInput.value);
+
+      let user = { username: usernameInput.value };
+      sessionStorage.setItem("user", JSON.stringify(user));
+
+      output.appendChild(loadSessionStorage());
+    };
+
+    const saveCookies = () => {
+      const usernameInput = document.getElementById("username");
+      const output = document.getElementById("output");
+      document.cookie = `username=${usernameInput.value}; max-age=15; path=/`;
+
+      output.appendChild(loadCookies());
+    };
+
+    const clearAll = () => {
+      const output = document.getElementById("output");
+
+      localStorage.removeItem("user");
+      sessionStorage.removeItem("user");
+      document.cookie = "username=; max-age=0; path=/";
+
+      output.innerHTML = "";
+    };
+  </script>
+
+<!--
+  Diseñar un formulario de inicio de sesión (nombre de usuario + contraseña) con un check de "Recordarme".
+  Al enviar el formulario, guarda la siguiente información en local storage:
+  - usuario ({ username: "", password: ""})
+
+  Si el check de "Recordarme" está activado, guarda también la información en cookies con expiración de 1 min. Al culminar el minuto, la cookie debe eliminarse automáticamente.
+
+  Opcional: Crear el local storage si y sólo sí existe la cookie.
+-->
+</html>
