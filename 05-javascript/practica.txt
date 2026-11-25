@@ -1,0 +1,16 @@
+Crear 4 funciones:
+- create
+- read
+- update
+- delete
+
+Create: Recibe un string y lo guarda en un array dentro de local storage.
+
+Read: Muestra en el DOM el contenido del array.
+
+Update: Recibe dos strings (old y new):
+1. Busca old en el array de local storage.
+2. Si lo encuentra, reemplaza su valor por new.
+3. Si no lo encuentra, emite un error con un alert.
+
+Delete: Recibe un string y lo busca en el array de local storage. Si lo encuentra, lo elimina del array. Si no, emite un error con un alert.

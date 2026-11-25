@@ -1,0 +1,77 @@
+<!--
+  Diseñar un formulario de inicio de sesión (nombre de usuario + contraseña) con un check de "Recordarme".
+  Al enviar el formulario, guarda la siguiente información en local storage:
+  - usuario ({ username: "", password: ""})
+
+  Si el check de "Recordarme" está activado, guarda también la información en cookies con expiración de 1 min. Al culminar el minuto, la cookie debe eliminarse automáticamente.
+
+  Opcional: Crear el local storage si y sólo sí existe la cookie.
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio de sesión</title>
+  </head>
+  <body>
+    <form id="login-form">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" />
+      <input type="checkbox" id="remember-me" /> Recuérdame
+      <button type="submit">Iniciar Sesión</button>
+    </form>
+  </body>
+
+  <script>
+    const getCookie = () => {
+      if (document.cookie.includes("username")) {
+        // Cookie at the start:
+        // let cookie = `username=${username}; max-age=3600; path=/`
+
+        // After split:
+        // let cookie = ["username=${username}", "max-age=3600", "path=/"]
+
+        // After find:
+        // let cookie = "username=${username}"
+        let cookie = document.cookie.split("; ").find((row) => {
+          return row.startsWith("username=");
+        });
+
+        // After split:
+        // let cookie = ["username", "${username}"]
+        return cookie.split("=")[1];
+      }
+    };
+
+    const usernameInput = document.getElementById("username");
+    const passwordInput = document.getElementById("password");
+    const rememberCheckbox = document.getElementById("remember-me");
+
+    const loginForm = document.getElementById("login-form");
+
+    loginForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      let username = usernameInput.value;
+      let password = passwordInput.value;
+
+      if (rememberCheckbox.checked) {
+        document.cookie = `username=${username}; max-age=3600; path=/`;
+      } else {
+        document.cookie = "username=; max-age=0; path=/";
+      }
+    });
+
+    const savedUsername = getCookie();
+    console.log("Saved username from cookie:", savedUsername);
+
+    if (savedUsername) {
+      usernameInput.value = savedUsername;
+      rememberCheckbox.checked = true;
+    }
+  </script>
+</html>
